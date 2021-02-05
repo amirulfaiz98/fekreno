@@ -87,6 +87,18 @@ const routes = [
         },
         component: () => import('pages/User/Applications.vue')
       },
+
+      {
+        path:'/policy',
+        meta:{
+          title:'Privacy Policy',
+          roles:[],
+          sidebar: true,
+          icon:'fas fa-exclamation-circle'
+        },   
+      component: () => import('pages/User/Privacy.vue')
+   },
+
       {
         path: '/journal',
         meta: {
@@ -200,6 +212,16 @@ const routes = [
           icon: 'school'
         },
         component: () => import('pages/Position.vue')
+      },
+      {
+        path: '/admin/tags',
+        meta: {
+          title: 'Tags Management',
+          roles: ['admin', 'master'],
+          sidebar: true,
+          icon: 'school'
+        },
+        component: () => import('pages/Tags.vue')
       },
       {
         path: `admin/participants/:id`,
